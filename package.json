@@ -2,7 +2,7 @@
   "name": "pokedex-main",
   "version": "1.0.0",
   "description": "# Pokedex",
-  "main": "pokemon.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -12,6 +12,7 @@
   "dependencies": {
     "ejs": "^3.1.9",
     "express": "^4.18.2",
+    "method-override": "^3.0.0",
     "mongoose": "^7.0.3"
   }
 }
