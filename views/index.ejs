@@ -7,6 +7,21 @@
     <title>Pokedex</title>
 </head>
 <body>
-    <h1> Pokemon</h1>
+    <h1> Welcome to your Pokedex</h1>
     <nav>
-        <a href="/pokemon/new"> Welcome to your Pokedex!</a>
+        <a href="/pokemon/new"> Create new Pokemon!</a>
+        <% for (let i = 0; i < pokemon.length; i++) { %>
+            <div>
+              <h2><%= pokemon[i].name %></h2>
+              <img src="<%= pokemon[i].img %>" alt="<%= pokemon[i].name %>">
+              <p>Type: <%= pokemon[i].type.join(', ') %></p>
+              <p>HP: <%= pokemon[i].stats.hp %></p>
+              <p>Attack: <%= pokemon[i].stats.attack %></p>
+              <p>Defense: <%= pokemon[i].stats.defense %></p>
+              <p>Special Attack: <%= pokemon[i].stats.spattack %></p>
+              <p>Special Defense: <%= pokemon[i].stats.spdefense %></p>
+              <p>Speed: <%= pokemon[i].stats.speed %></p>
+            </div>
+          <% } %>
+        </body>
+      </html>
