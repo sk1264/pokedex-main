@@ -1,13 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex</title>
-</head>
-<h1<%= pokemon.name %></h1>
-<body>
-    
-</body>
-</html>
+<h1><%= pokemon.name %></h1>
+
+<div>
+  <img src="<%= pokemon.img %>" alt="<%= pokemon.name %>">
+  <ul>
+    <li>ID: <%= pokemon.id %></li>
+    <li>Type: <%= pokemon.type.join(', ') %></li>
+    <li>Stats:</li>
+    <ul>
+      <li>HP: <%= pokemon.stats.hp %></li>
+      <li>Attack: <%= pokemon.stats.attack %></li>
+      <li>Defense: <%= pokemon.stats.defense %></li>
+      <li>Sp. Attack: <%= pokemon.stats.spattack %></li>
+      <li>Sp. Defense: <%= pokemon.stats.spdefense %></li>
+      <li>Speed: <%= pokemon.stats.speed %></li>
+    </ul>
+  </ul>
+</div>

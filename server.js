@@ -19,19 +19,22 @@ app.get('/pokemon', (req, res) => {
     res.render('index.ejs', {pokemon, pokemon})
 })
 
-// show
-
-
-
 // new
 app.get('/pokemon/new', (req, res) => {
     res.render("new.ejs");
 })
 
-// edit
-app.get('/pokemon/:id', (req,res) => {
-    res.render('edit.ejs');
-})
+// // edit
+// app.get('/pokemon/:id', (req,res) => {
+//     res.render('edit.ejs');
+// })
+
+// show single pokemon
+app.get('/pokemon/:id', (req, res) => {
+    const id = req.params.id;
+    const selectedPokemon = pokemon.find(p => p.id === id);
+    res.render('show.ejs', { pokemon: selectedPokemon });
+  });
 
 // create
 
@@ -52,8 +55,6 @@ app.post('/pokemon', (req, res) => {
       res.redirect("/pokemon");
     });
   
-
-// update
 
 // delete
 app.delete('/pokemon/:id', (req, res) => {

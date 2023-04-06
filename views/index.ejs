@@ -12,8 +12,10 @@
         <a href="/pokemon/new"> Create new Pokemon!</a>
         <% for (let i = 0; i < pokemon.length; i++) { %>
             <div>
+              <a href="/pokemon/<%= pokemon[i].id %>">
+                <img src="<%= pokemon[i].img %>" alt="<%= pokemon[i].name %>">
+              </a>
               <h2><%= pokemon[i].name %></h2>
-              <img src="<%= pokemon[i].img %>" alt="<%= pokemon[i].name %>">
               <p>Type: <%= String(pokemon[i].type).split(',')%></p>
               <p>HP: <%= pokemon[i].stats.hp %></p>
               <p>Attack: <%= pokemon[i].stats.attack %></p>
