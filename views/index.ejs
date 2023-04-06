@@ -9,7 +9,7 @@
 <body>
     <h1> Welcome to your Pokedex</h1>
     <nav>
-        <a href="/pokemon/new"> Create new Pokemon!</a>
+        <a href="/pokemon/new"> Add new Pokemon!</a>
         <% for (let i = 0; i < pokemon.length; i++) { %>
             <div>
               <a href="/pokemon/<%= pokemon[i].id %>">
@@ -20,9 +20,6 @@
               <p>HP: <%= pokemon[i].stats.hp %></p>
               <p>Attack: <%= pokemon[i].stats.attack %></p>
               <p>Defense: <%= pokemon[i].stats.defense %></p>
-              <p>Special Attack: <%= pokemon[i].stats.spattack %></p>
-              <p>Special Defense: <%= pokemon[i].stats.spdefense %></p>
-              <p>Speed: <%= pokemon[i].stats.speed %></p>
             </div>
           <% } %>
         </body>

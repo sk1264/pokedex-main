@@ -24,10 +24,11 @@ app.get('/pokemon/new', (req, res) => {
     res.render("new.ejs");
 })
 
-// // edit
-// app.get('/pokemon/:id', (req,res) => {
-//     res.render('edit.ejs');
-// })
+//edit
+app.get('/:id/edit', (req, res) => {
+	const pokemon = pokemon.findById(req.params.id);
+	res.render("pokemon/edit.ejs", {pokemon})
+})
 
 // show single pokemon
 app.get('/pokemon/:id', (req, res) => {

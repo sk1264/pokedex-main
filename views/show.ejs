@@ -10,9 +10,13 @@
       <li>HP: <%= pokemon.stats.hp %></li>
       <li>Attack: <%= pokemon.stats.attack %></li>
       <li>Defense: <%= pokemon.stats.defense %></li>
-      <li>Sp. Attack: <%= pokemon.stats.spattack %></li>
-      <li>Sp. Defense: <%= pokemon.stats.spdefense %></li>
-      <li>Speed: <%= pokemon.stats.speed %></li>
     </ul>
   </ul>
+  <article>
+        <a href="/pokemon/<%= pokemon._id %>/edit"><button>Edit</button></a>
+        <form action="/pokemon/<%= pokemon._id %>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete" />
+        </form>
+        <a href="/pokemon/"><button>Back to Main</button></a>
+</article>
 </div>
