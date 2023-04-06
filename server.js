@@ -10,14 +10,28 @@ app.use(express.static("public"));
 app.use(methodOverride('_method'));
 
 // index
-app.get('/pokemon/', (req, res) => {
+app.get('/pokemon', (req, res) => {
     res.render('index.ejs', {pokemon, pokemon})
 })
 
+// show
+
+
 // new
-app.get('/pokemon/new/', (req, res) => {
-    res.render("new.ejs", {title: "Add New Pokemon"});
+app.get('/pokemon/new', (req, res) => {
+    res.render("new.ejs");
 })
+
+// edit
+app.get('/:id/edit', (req,res) => {
+    res.render("edit.ejs")
+})
+
+// create
+
+// update
+
+// destroy
 
 // listening
 app.listen(3000, () => {
