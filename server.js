@@ -29,12 +29,29 @@ app.get('/pokemon/new', (req, res) => {
 })
 
 // edit
-// app.get('/pokemon/:id', (req,res) => {
-//     res.render('edit.ejs',
-//     pokemon: pokemon)
-// })
+app.get('/pokemon/:id', (req,res) => {
+    res.render('edit.ejs');
+})
 
 // create
+
+app.post('/pokemon', (req, res) => {
+    const newPokemon = {
+      name: req.body.name,
+      img: req.body.img,
+      type: req.body.type,
+      stats: {
+        hp: req.body.hp,
+        attack: req.body.attack,
+        defense: req.body.defense,
+        spattack: req.body.spattack,
+        spdefense: req.body.spdefense,
+        speed: req.body.speed,
+      }}
+      pokemon.push(newPokemon);
+      res.redirect("/pokemon");
+    });
+  
 
 // update
 

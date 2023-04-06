@@ -14,7 +14,7 @@
             <div>
               <h2><%= pokemon[i].name %></h2>
               <img src="<%= pokemon[i].img %>" alt="<%= pokemon[i].name %>">
-              <p>Type: <%= pokemon[i].type.join(', ') %></p>
+              <p>Type: <%= String(pokemon[i].type).split(',')%></p>
               <p>HP: <%= pokemon[i].stats.hp %></p>
               <p>Attack: <%= pokemon[i].stats.attack %></p>
               <p>Defense: <%= pokemon[i].stats.defense %></p>
